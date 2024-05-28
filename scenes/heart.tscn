@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bythq66dapbp0"]
+
+[ext_resource type="Texture2D" uid="uid://y0du7j2rn7g4" path="res://resources/tileset_city_free.png" id="1_8hawt"]
+[ext_resource type="Script" path="res://scenes/heart.cs" id="1_p05m8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrffu"]
+atlas = ExtResource("1_8hawt")
+region = Rect2(80, 255, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p611g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrffu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aknjk"]
+radius = 8.06226
+
+[node name="Heart" type="Area2D"]
+scale = Vector2(2.64, 2.64)
+collision_layer = 16
+script = ExtResource("1_p05m8")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p611g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_aknjk")
+
+[connection signal="body_entered" from="." to="." method="OnHeartBodyEntered"]
