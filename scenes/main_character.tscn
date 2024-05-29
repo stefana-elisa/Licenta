@@ -113,20 +113,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_605k3"]
-size = Vector2(44, 52)
+size = Vector2(44, 62)
 
 [node name="MainCharacter" type="CharacterBody2D"]
 collision_mask = 52
 script = ExtResource("1_7jfgm")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(21, -24)
 scale = Vector2(3.68182, 3.68182)
 sprite_frames = SubResource("SpriteFrames_dhy5n")
-animation = &"running"
+animation = &"jumping"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(17, 9)
+position = Vector2(23, 4)
 shape = SubResource("RectangleShape2D_605k3")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhmc5n86xwfpn"
-path="res://.godot/imported/Tileset Earth 16x16.png-b2d4d1414ba3ad24bdf0a663e7280922.ctex"
+uid="uid://u38ogqwxtyut"
+path="res://.godot/imported/Tileset Lake 16x16.png-93282fec370bd46265b861523d781a3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Earth 16x16.png"
-dest_files=["res://.godot/imported/Tileset Earth 16x16.png-b2d4d1414ba3ad24bdf0a663e7280922.ctex"]
+source_file="res://resources/level1/Tileset Lake 16x16.png"
+dest_files=["res://.godot/imported/Tileset Lake 16x16.png-93282fec370bd46265b861523d781a3c.ctex"]
 
 [params]
 

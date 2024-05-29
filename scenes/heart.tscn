@@ -1,10 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bythq66dapbp0"]
 
-[ext_resource type="Texture2D" uid="uid://y0du7j2rn7g4" path="res://resources/tileset_city_free.png" id="1_8hawt"]
 [ext_resource type="Script" path="res://scenes/heart.cs" id="1_p05m8"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mpdo"]
+load_path = "res://.godot/imported/tileset_city_free.png-d74a5e9eea1c9ecfa1e34bb223f2387b.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rrffu"]
-atlas = ExtResource("1_8hawt")
+atlas = SubResource("CompressedTexture2D_6mpdo")
 region = Rect2(80, 255, 16, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p611g"]

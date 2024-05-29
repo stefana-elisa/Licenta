@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7vbvkojsc547"
-path="res://.godot/imported/Tileset Garden 16x16.png-d7c88713703956e5e59a3703d8aaf351.ctex"
+uid="uid://v5gmsaxx7pcs"
+path="res://.godot/imported/Tileset Park 16x16.png-8108b69d4b0b37d9ceee44760f3ec29d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Garden 16x16.png"
-dest_files=["res://.godot/imported/Tileset Garden 16x16.png-d7c88713703956e5e59a3703d8aaf351.ctex"]
+source_file="res://resources/level1/Tileset Park 16x16.png"
+dest_files=["res://.godot/imported/Tileset Park 16x16.png-8108b69d4b0b37d9ceee44760f3ec29d.ctex"]
 
 [params]
 

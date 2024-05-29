@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdnkvli6rhm7c"
-path="res://.godot/imported/Kiwi.png-bdeaecad0c97d4573158949d3ffb5282.ctex"
+uid="uid://bhmc5n86xwfpn"
+path="res://.godot/imported/Tileset Earth 16x16.png-cf9f95458fe57d4900c1f919c3186c39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Kiwi.png"
-dest_files=["res://.godot/imported/Kiwi.png-bdeaecad0c97d4573158949d3ffb5282.ctex"]
+source_file="res://resources/level1/Tileset Earth 16x16.png"
+dest_files=["res://.godot/imported/Tileset Earth 16x16.png-cf9f95458fe57d4900c1f919c3186c39.ctex"]
 
 [params]
 

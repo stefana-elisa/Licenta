@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpptgky7ujtyb"
-path="res://.godot/imported/Tileset Brickwall Brown 16x16.png-b773ddb4791d257e334a643137fcb49c.ctex"
+uid="uid://cdnkvli6rhm7c"
+path="res://.godot/imported/Kiwi.png-2c2400e5c9ab5ffb516827224d7df17f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Brickwall Brown 16x16.png"
-dest_files=["res://.godot/imported/Tileset Brickwall Brown 16x16.png-b773ddb4791d257e334a643137fcb49c.ctex"]
+source_file="res://resources/level1/Kiwi.png"
+dest_files=["res://.godot/imported/Kiwi.png-2c2400e5c9ab5ffb516827224d7df17f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u38ogqwxtyut"
-path="res://.godot/imported/Tileset Lake 16x16.png-a95d7f5450e5bc859b01ed614623e4af.ctex"
+uid="uid://d318qlvq72uqi"
+path="res://.godot/imported/Tileset Garden Patch 16x16.png-8da3aae7120746e58d27976db81c6459.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Lake 16x16.png"
-dest_files=["res://.godot/imported/Tileset Lake 16x16.png-a95d7f5450e5bc859b01ed614623e4af.ctex"]
+source_file="res://resources/level1/Tileset Garden Patch 16x16.png"
+dest_files=["res://.godot/imported/Tileset Garden Patch 16x16.png-8da3aae7120746e58d27976db81c6459.ctex"]
 
 [params]
 

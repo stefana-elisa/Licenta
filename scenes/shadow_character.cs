@@ -102,8 +102,9 @@ public partial class shadow_character : CharacterBody2D
 		GD.Print("Ajuns in fct on body entered");
         if (body is RigidBody2D)
         {
+			float direction = Input.GetAxis("left", "right");
             GD.Print("Collided with RigidBody2D: ", body.Name);
-            Position = new Vector2(Position.X + 3, Position.Y - 10);
+            Position = new Vector2(Position.X + 1, Position.Y);
         }
     }
 }

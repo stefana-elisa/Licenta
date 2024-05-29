@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v5gmsaxx7pcs"
-path="res://.godot/imported/Tileset Park 16x16.png-5418f0e796e5b2a3171f4fd181665c12.ctex"
+uid="uid://cst571u7frp5x"
+path="res://.godot/imported/RTS_Crate.png-d7bb5fdea6da056f8172b4fd5ed62132.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Park 16x16.png"
-dest_files=["res://.godot/imported/Tileset Park 16x16.png-5418f0e796e5b2a3171f4fd181665c12.ctex"]
+source_file="res://resources/level2/RTS_Crate.png"
+dest_files=["res://.godot/imported/RTS_Crate.png-d7bb5fdea6da056f8172b4fd5ed62132.ctex"]
 
 [params]
 

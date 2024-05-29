@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y0du7j2rn7g4"
-path="res://.godot/imported/tileset_city_free.png-9688e24a125798428edd687b8202de0d.ctex"
+uid="uid://be5tojvtbyuq5"
+path="res://.godot/imported/Tileset Fruit Tree 16x16.png-7b5ab1c363f70f692ac508a0138cd167.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/level2/tileset_city_free.png"
-dest_files=["res://.godot/imported/tileset_city_free.png-9688e24a125798428edd687b8202de0d.ctex"]
+source_file="res://resources/level1/Tileset Fruit Tree 16x16.png"
+dest_files=["res://.godot/imported/Tileset Fruit Tree 16x16.png-7b5ab1c363f70f692ac508a0138cd167.ctex"]
 
 [params]
 

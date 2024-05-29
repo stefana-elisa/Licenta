@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5tojvtbyuq5"
-path="res://.godot/imported/Tileset Fruit Tree 16x16.png-9054ecd4600e487e9261dc6060666bcc.ctex"
+uid="uid://b7vbvkojsc547"
+path="res://.godot/imported/Tileset Garden 16x16.png-adf96b343b2408cfe17d8c2617ada810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Fruit Tree 16x16.png"
-dest_files=["res://.godot/imported/Tileset Fruit Tree 16x16.png-9054ecd4600e487e9261dc6060666bcc.ctex"]
+source_file="res://resources/level1/Tileset Garden 16x16.png"
+dest_files=["res://.godot/imported/Tileset Garden 16x16.png-adf96b343b2408cfe17d8c2617ada810.ctex"]
 
 [params]
 

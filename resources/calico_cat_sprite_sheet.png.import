@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d318qlvq72uqi"
-path="res://.godot/imported/Tileset Garden Patch 16x16.png-322a322426d831f11776778e28db1f11.ctex"
+uid="uid://5eumfppb6e7q"
+path="res://.godot/imported/calico_cat_sprite_sheet.png-a0b0aff2473700a1c5fcc15eecf65f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Tileset Garden Patch 16x16.png"
-dest_files=["res://.godot/imported/Tileset Garden Patch 16x16.png-322a322426d831f11776778e28db1f11.ctex"]
+source_file="res://resources/calico_cat_sprite_sheet.png"
+dest_files=["res://.godot/imported/calico_cat_sprite_sheet.png-a0b0aff2473700a1c5fcc15eecf65f27.ctex"]
 
 [params]
 

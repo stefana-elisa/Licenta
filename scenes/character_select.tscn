@@ -1,0 +1,165 @@
+[gd_scene load_steps=19 format=3 uid="uid://b6k76touf6gev"]
+
+[ext_resource type="Texture2D" uid="uid://dd86seq6hfwgl" path="res://resources/menu/Brown.png" id="1_8sd2d"]
+[ext_resource type="Script" path="res://scenes/character_select.cs" id="1_aw1tc"]
+[ext_resource type="Texture2D" uid="uid://kd0wto1ghd46" path="res://resources/Cat Sprite Sheet.png" id="2_ls8j5"]
+[ext_resource type="Texture2D" uid="uid://bi8746nirpnam" path="res://resources/black_cat_sprite_sheet.png" id="3_dlypo"]
+[ext_resource type="Texture2D" uid="uid://5eumfppb6e7q" path="res://resources/calico_cat_sprite_sheet.png" id="4_62avb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iesdp"]
+atlas = ExtResource("2_ls8j5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nokva"]
+atlas = ExtResource("2_ls8j5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhpwv"]
+atlas = ExtResource("2_ls8j5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws1n0"]
+atlas = ExtResource("2_ls8j5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_povjf"]
+atlas = ExtResource("3_dlypo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx7qt"]
+atlas = ExtResource("3_dlypo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woy5e"]
+atlas = ExtResource("3_dlypo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mesoc"]
+atlas = ExtResource("3_dlypo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23ius"]
+atlas = ExtResource("4_62avb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbye2"]
+atlas = ExtResource("4_62avb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiici"]
+atlas = ExtResource("4_62avb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wh3f"]
+atlas = ExtResource("4_62avb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgca0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iesdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nokva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhpwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws1n0")
+}],
+"loop": true,
+"name": &"player0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_povjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx7qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woy5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mesoc")
+}],
+"loop": true,
+"name": &"player1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23ius")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbye2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiici")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wh3f")
+}],
+"loop": true,
+"name": &"player2",
+"speed": 5.0
+}]
+
+[node name="CharacterSelect" type="Node"]
+script = ExtResource("1_aw1tc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8sd2d")
+stretch_mode = 1
+
+[node name="PlayerSelect" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(564, 248)
+scale = Vector2(7.03125, 7.03125)
+sprite_frames = SubResource("SpriteFrames_dgca0")
+animation = &"player2"
+autoplay = "player0"
+
+[node name="Left" type="Button" parent="."]
+offset_left = 386.0
+offset_top = 285.0
+offset_right = 473.0
+offset_bottom = 343.0
+theme_override_font_sizes/font_size = 40
+text = "<"
+
+[node name="Right" type="Button" parent="."]
+offset_left = 666.0
+offset_top = 285.0
+offset_right = 753.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="Select" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -215.0
+offset_right = 121.0
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Select"
+
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]

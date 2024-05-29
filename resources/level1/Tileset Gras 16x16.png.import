@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y0du7j2rn7g4"
-path="res://.godot/imported/tileset_city_free.png-9688e24a125798428edd687b8202de0d.ctex"
+uid="uid://bs3f1aqihur3l"
+path="res://.godot/imported/Tileset Gras 16x16.png-9f085ca358eb56d91c92ad7f1cec4e41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/level2/tileset_city_free.png"
-dest_files=["res://.godot/imported/tileset_city_free.png-9688e24a125798428edd687b8202de0d.ctex"]
+source_file="res://resources/level1/Tileset Gras 16x16.png"
+dest_files=["res://.godot/imported/Tileset Gras 16x16.png-9f085ca358eb56d91c92ad7f1cec4e41.ctex"]
 
 [params]
 

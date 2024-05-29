@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://7r5qsdy2v535"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.cs" id="1_161fc"]
+[ext_resource type="Texture2D" uid="uid://8gxde2f05ee5" path="res://resources/menu/cat_game.png" id="1_edd37"]
+[ext_resource type="Texture2D" uid="uid://dd86seq6hfwgl" path="res://resources/menu/Brown.png" id="1_kf82a"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_161fc")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kf82a")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.0
+offset_top = -162.0
+offset_right = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_edd37")
+
+[node name="PlayBTN" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 60.0
+offset_right = 127.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.74902, 0.784314, 0.47451, 1)
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[connection signal="pressed" from="PlayBTN" to="." method="_on_play_btn_pressed"]
