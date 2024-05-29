@@ -32,13 +32,17 @@ public partial class character_select : Node
 		if (game.PlayerSelect < 2)
 		{
 			game.PlayerSelect += 1;
+			GD.Print(game.PlayerSelect);
 		}
 	}
 
 	public void _on_left_pressed()
 	{
 		if (game.PlayerSelect > 0)
-		game.PlayerSelect -= 1;
+		{
+			game.PlayerSelect -= 1;
+			GD.Print(game.PlayerSelect);
+		}
 	}
 
 	public void _on_select_pressed()

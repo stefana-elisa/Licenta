@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://nnn78mxkadtm"]
+[gd_scene load_steps=19 format=3 uid="uid://nnn78mxkadtm"]
 
 [ext_resource type="Script" path="res://scenes/main_character.cs" id="1_7jfgm"]
 [ext_resource type="Texture2D" uid="uid://kd0wto1ghd46" path="res://resources/Cat Sprite Sheet.png" id="2_u3th5"]
+[ext_resource type="Script" path="res://scenes/character_skins.cs" id="3_re53l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y7q1f"]
 atlas = ExtResource("2_u3th5")
@@ -124,8 +125,8 @@ texture_filter = 1
 position = Vector2(21, -24)
 scale = Vector2(3.68182, 3.68182)
 sprite_frames = SubResource("SpriteFrames_dhy5n")
-animation = &"jumping"
 autoplay = "default"
+script = ExtResource("3_re53l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(23, 4)
