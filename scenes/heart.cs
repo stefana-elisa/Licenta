@@ -20,7 +20,7 @@ public partial class heart : Area2D
         }
         else if (sceneName == "level2" && body.Name == "ShadowCharacter")
         {
-            CallDeferred(nameof(ChangeScene), "res://scenes/main_menu.tscn");
+            CallDeferred(nameof(ChangeScene), "res://scenes/end_screen.tscn");
         }
 	}
 
