@@ -25,7 +25,8 @@ radius = 8.06226
 
 [node name="Heart" type="Area2D"]
 scale = Vector2(2.64, 2.64)
-collision_layer = 16
+collision_layer = 128
+collision_mask = 3
 script = ExtResource("1_p05m8")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]

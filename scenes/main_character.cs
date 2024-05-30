@@ -11,7 +11,6 @@ public partial class main_character : CharacterBody2D
 	public override void _Ready()
     {
         sprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        GD.Print(sprite2d);
     }
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.

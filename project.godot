@@ -59,6 +59,8 @@ down={
 2d_physics/layer_4="shadow_background"
 2d_physics/layer_5="interactables"
 2d_physics/layer_6="platforms"
+2d_physics/layer_7="crate_barriers"
+2d_physics/layer_8="collectables"
 
 [rendering]
 

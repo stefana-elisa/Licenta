@@ -135,7 +135,8 @@ radius = 7.0
 
 [node name="Collectable" type="Area2D"]
 scale = Vector2(2.48, 2.48)
-collision_layer = 16
+collision_layer = 128
+collision_mask = 3
 script = ExtResource("1_6vst3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

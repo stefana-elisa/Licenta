@@ -54,14 +54,22 @@ public partial class shadow_character : CharacterBody2D
 
 			// Handle Jump.
 			if (Input.IsActionJustPressed("jump") && IsOnFloor())
+			{
 				velocity.Y = JumpVelocity;
+			}
 
 			// Get the input direction and handle the movement/deceleration.
 			// As good practice, you should replace UI actions with custom gameplay actions.
 			if (distance > 40 || distance < 30)
 			{
 				Vector2 _target = new((float)targetPosition, mainCharacter.GlobalPosition.Y);
-				Velocity = Position.DirectionTo(_target) * 2000.0f;
+				Velocity = GlobalPosition.DirectionTo(_target) * 300.0f;
+
+				// if (!mainCharacter.IsOnFloor())
+				// {
+				// 	GlobalPosition = new Vector2(GlobalPosition.X, mainCharacter.GlobalPosition.Y);
+				// }		
+				
 				MoveAndSlide();
 			} 
 			else 
@@ -99,12 +107,17 @@ public partial class shadow_character : CharacterBody2D
 
 	private void OnBodyEntered(Node body)
     {
-		GD.Print("Ajuns in fct on body entered");
         if (body is RigidBody2D)
         {
 			float direction = Input.GetAxis("left", "right");
-            GD.Print("Collided with RigidBody2D: ", body.Name);
-            Position = new Vector2(Position.X + 1, Position.Y);
+			if (Position.Y + 20 < mainCharacter.Position.Y) 
+			{
+				Position = new Vector2(Position.X, Position.Y + 3);
+			}
+			else
+			{
+				Position = new Vector2(Position.X + 1, Position.Y);
+			}
         }
     }
 }

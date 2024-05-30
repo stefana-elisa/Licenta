@@ -23,17 +23,13 @@ public partial class character_skins : AnimatedSprite2D
         // }
 
 		game = GetNode<game>("/root/Game");
-		GD.Print($"game: {game}");
-		GD.Print($"game.playerselect: {game.PlayerSelect}");
 
         if (players.TryGetValue(game.PlayerSelect, out var loadResource))
         {
-			GD.Print("Got into first if");
             var resource = loadResource();
             if (resource is SpriteFrames spriteFrames)
             {
                 SpriteFrames = spriteFrames;
-				GD.Print("Got into second if");
             }
             else
             {
