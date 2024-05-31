@@ -1756,12 +1756,12 @@ position = Vector2(3842, 325)
 position = Vector2(2209, 357)
 
 [node name="ShadowCharacter" parent="SceneObjects" instance=ExtResource("13_sqx05")]
-position = Vector2(68, 571)
+position = Vector2(72, 568)
 scale = Vector2(2.64808, 2.64808)
 
 [node name="MainCharacter" parent="SceneObjects" instance=ExtResource("10_q2meo")]
 unique_name_in_owner = true
-position = Vector2(91, 586)
+position = Vector2(95, 583)
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/MainCharacter"]
 position = Vector2(18, 13)

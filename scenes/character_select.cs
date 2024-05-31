@@ -16,13 +16,13 @@ public partial class character_select : Node
 		switch (game.PlayerSelect)
         {
             case 0:
-                GetNode<AnimatedSprite2D>("PlayerSelect").Play("player0");
+                GetNode<AnimatedSprite2D>("%PlayerSelect").Play("player0");
                 break;
             case 1:
-				GetNode<AnimatedSprite2D>("PlayerSelect").Play("player1");
+				GetNode<AnimatedSprite2D>("%PlayerSelect").Play("player1");
 				break;
 			case 2:
-				GetNode<AnimatedSprite2D>("PlayerSelect").Play("player2");
+				GetNode<AnimatedSprite2D>("%PlayerSelect").Play("player2");
 				break;
         }
 	}

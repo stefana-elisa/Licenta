@@ -111,7 +111,7 @@ public partial class shadow_character : CharacterBody2D
         if (body is RigidBody2D)
         {
 			float direction = Input.GetAxis("left", "right");
-			GD.Print("Collided with RigidBody2D: ", body.Name);
+			//GD.Print("Collided with RigidBody2D: ", body.Name);
 			if (Position.Y + 20 < mainCharacter.Position.Y) 
 			{
 				Position = new Vector2(Position.X, Position.Y + 3);

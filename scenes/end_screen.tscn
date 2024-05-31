@@ -65,3 +65,5 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Back"
+
+[connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]
