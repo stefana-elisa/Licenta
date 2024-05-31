@@ -1,19 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://bythq66dapbp0"]
 
 [ext_resource type="Script" path="res://scenes/heart.cs" id="1_p05m8"]
+[ext_resource type="Texture2D" uid="uid://y0du7j2rn7g4" path="res://resources/level2/tileset_city_free.png" id="2_c0key"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mpdo"]
-load_path = "res://.godot/imported/tileset_city_free.png-d74a5e9eea1c9ecfa1e34bb223f2387b.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rrffu"]
-atlas = SubResource("CompressedTexture2D_6mpdo")
-region = Rect2(80, 255, 16, 17)
+[sub_resource type="AtlasTexture" id="AtlasTexture_elpnh"]
+atlas = ExtResource("2_c0key")
+region = Rect2(80, 256, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p611g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rrffu")
+"texture": SubResource("AtlasTexture_elpnh")
 }],
 "loop": true,
 "name": &"default",
@@ -32,6 +30,7 @@ script = ExtResource("1_p05m8")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_p611g")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
