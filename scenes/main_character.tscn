@@ -125,6 +125,7 @@ texture_filter = 1
 position = Vector2(21, -24)
 scale = Vector2(3.68182, 3.68182)
 sprite_frames = SubResource("SpriteFrames_dhy5n")
+animation = &"running"
 autoplay = "default"
 script = ExtResource("3_re53l")
 

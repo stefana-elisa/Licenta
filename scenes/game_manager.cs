@@ -26,13 +26,14 @@ public partial class game_manager : Node
         string sceneName = currentScene.Name;
 
         points += 1;
-		pointsLabel.Text = "Points: " + points + " / 5";
 
 		if (sceneName == "level1")
 		{
+			pointsLabel.Text = "Points: " + points + " / 6";
 			game.Level1Points +=1;
 		} else if (sceneName == "level2")
 		{
+			pointsLabel.Text = "Points: " + points + " / 5";
 			game.Level2Points +=1;
 		}
 

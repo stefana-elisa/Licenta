@@ -33,6 +33,10 @@ public partial class character_select : Node
 		{
 			game.PlayerSelect += 1;
 		}
+		else if (game.PlayerSelect == 2)
+		{
+			game.PlayerSelect = 0;
+		}
 	}
 
 	public void _on_left_pressed()
@@ -40,6 +44,10 @@ public partial class character_select : Node
 		if (game.PlayerSelect > 0)
 		{
 			game.PlayerSelect -= 1;
+		}
+		else if (game.PlayerSelect == 0)
+		{
+			game.PlayerSelect = 2;
 		}
 	}
 

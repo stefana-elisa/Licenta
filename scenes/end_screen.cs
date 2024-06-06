@@ -13,7 +13,7 @@ public partial class end_screen : Node
     
 		GD.Print(game.Level1Points);
 		GD.Print(game.Level2Points);
-		float score = (float)(game.Level1Points + game.Level2Points) / 10 * 100;
+		float score = (float)(game.Level1Points + game.Level2Points) / 11 * 100;
 		scoreLabel.Text = "Your score is: " + score + "%";
 		GD.Print("Your score is: " + score + "%");
 	}
