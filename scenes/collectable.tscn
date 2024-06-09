@@ -1,10 +1,39 @@
-[gd_scene load_steps=22 format=3 uid="uid://b2pbjwpf44wpv"]
+[gd_scene load_steps=30 format=3 uid="uid://b2pbjwpf44wpv"]
 
 [ext_resource type="Script" path="res://scenes/collectable.cs" id="1_6vst3"]
 [ext_resource type="Texture2D" uid="uid://cvwyvp1mc0r3k" path="res://resources/Yarnball.png" id="2_6dfr2"]
+[ext_resource type="Texture2D" uid="uid://deqbbckkoq52m" path="res://resources/Feather.png" id="2_k8a8d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j52hn"]
 radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buv2p"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18xuc"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv0n2"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxt1s"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pram0"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hvs7"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmwil"]
+atlas = ExtResource("2_k8a8d")
+region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gr5cm"]
 atlas = ExtResource("2_6dfr2")
@@ -78,6 +107,32 @@ region = Rect2(512, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_buv2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18xuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv0n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxt1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pram0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hvs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmwil")
+}],
+"loop": true,
+"name": &"feather",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_gr5cm")
 }, {
 "duration": 1.0,
@@ -129,7 +184,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ms4if")
 }],
 "loop": true,
-"name": &"default",
+"name": &"yarn",
 "speed": 15.0
 }]
 
@@ -145,7 +200,9 @@ shape = SubResource("CircleShape2D_j52hn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rflc5")
-autoplay = "default"
-frame_progress = 0.0248367
+animation = &"feather"
+autoplay = "yarn"
+frame = 1
+frame_progress = 0.984139
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]

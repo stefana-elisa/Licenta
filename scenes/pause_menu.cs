@@ -48,6 +48,7 @@ public partial class pause_menu : Control
   
     public void _on_quit_pressed()
     {
+        Resume();
         GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
     }
 

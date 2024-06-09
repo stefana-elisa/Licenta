@@ -122,4 +122,12 @@ public partial class shadow_character : CharacterBody2D
 			}
         }
     }
+
+	public override void _Input(InputEvent @event)
+    {
+        if ((@event is InputEventKey keyEvent) && Input.IsActionJustPressed("down") && IsOnFloor())
+        {
+            Position = new Vector2(Position.X, Position.Y + 1);
+        }
+    }
 }
