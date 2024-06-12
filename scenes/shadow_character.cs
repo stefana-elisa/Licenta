@@ -8,11 +8,12 @@ public partial class shadow_character : CharacterBody2D
 	private AnimatedSprite2D sprite2d;
 	private CharacterBody2D mainCharacter;
 	private Area2D collisionDetector;
+	public bool climbing = false;
 
 	public override void _Ready()
     {
         sprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        GD.Print(sprite2d);
+        //GD.Print(sprite2d);
 
 		mainCharacter = GetNode<CharacterBody2D>("%MainCharacter"); 	
 		if (mainCharacter == null)
@@ -29,9 +30,7 @@ public partial class shadow_character : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
-
-		
+		Vector2 velocity = Velocity;		
 
 		// Check the distance to mainCharacter
 		if (mainCharacter != null)
@@ -45,12 +44,32 @@ public partial class shadow_character : CharacterBody2D
 			else
 				sprite2d.Animation = "default";
 
-
-			// Add the gravity.
-			if (!IsOnFloor()) {
-				velocity.Y += gravity * (float)delta;
-				sprite2d.Animation = "jumping";
+	        if (mainCharacter is main_character main)
+			{
+				if (main.climbing == false)
+				{
+					// Add the gravity.
+					if (!IsOnFloor()) {
+						velocity.Y += gravity * (float)delta;
+						sprite2d.Animation = "jumping";
+					}
+				}
+				else if (main.climbing == true)
+				{
+							velocity.Y = 0;
+					if (Input.IsActionPressed("jump"))
+					{
+						velocity.Y = -600 * (float)delta * 10;
+						sprite2d.Animation = "jumping";
+					}
+					else if (Input.IsActionPressed("down"))
+					{
+						velocity.Y = 600 * (float)delta * 10;
+						sprite2d.Animation = "jumping";
+					}
+				}
 			}
+			
 
 			// Handle Jump.
 			if (Input.IsActionJustPressed("jump") && IsOnFloor())
@@ -58,19 +77,12 @@ public partial class shadow_character : CharacterBody2D
 				velocity.Y = JumpVelocity;
 			}
 
-			// Get the input direction and handle the movement/deceleration.
-			// As good practice, you should replace UI actions with custom gameplay actions.
-			if (distance > 40 || distance < 30)
+			if (distance > 40) //GlobalPosition.X + 37 < mainCharacter.GlobalPosition.X)
 			{
 				Vector2 _target = new((float)targetPosition, mainCharacter.GlobalPosition.Y);
-				Velocity = GlobalPosition.DirectionTo(_target) * 300.0f;
-
-				// if (!mainCharacter.IsOnFloor())
-				// {
-				// 	GlobalPosition = new Vector2(GlobalPosition.X, mainCharacter.GlobalPosition.Y);
-				// }		
+				Velocity = GlobalPosition.DirectionTo(_target) * 600.0f;
+	
 				
-				MoveAndSlide();
 			} 
 			else 
 			{
@@ -85,9 +97,9 @@ public partial class shadow_character : CharacterBody2D
 				}
 
 				Velocity = velocity;
-				MoveAndSlide();
 			}
-			
+			MoveAndSlide();
+
 			bool isLeft = velocity.X < 0;
 			sprite2d.FlipH = isLeft;
 			
@@ -107,14 +119,16 @@ public partial class shadow_character : CharacterBody2D
 
 	private void OnBodyEntered(Node body)
     {
-		GD.Print("Ajuns in fct on body entered");
+		//GD.Print("Ajuns in fct on body entered");
         if (body is RigidBody2D)
         {
 			float direction = Input.GetAxis("left", "right");
-			//GD.Print("Collided with RigidBody2D: ", body.Name);
 			if (Position.Y + 20 < mainCharacter.Position.Y) 
 			{
+				//GD.Print(Position);
 				Position = new Vector2(Position.X, Position.Y + 3);
+				//GD.Print("function 1");
+				//GD.Print(Position);
 			}
 			else
 			{
@@ -125,9 +139,10 @@ public partial class shadow_character : CharacterBody2D
 
 	public override void _Input(InputEvent @event)
     {
-        if ((@event is InputEventKey keyEvent) && Input.IsActionJustPressed("down") && IsOnFloor())
+        if ((@event is InputEventKey keyEvent) && Input.IsActionJustPressed("down") && IsOnFloor() && Position.Y + 20 >= mainCharacter.Position.Y)
         {
             Position = new Vector2(Position.X, Position.Y + 1);
+				//GD.Print("function 2");
         }
     }
 }

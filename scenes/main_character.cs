@@ -7,6 +7,7 @@ public partial class main_character : CharacterBody2D
 	public const float JumpVelocity = -400.0f;
 	float push_force = 80.0f;
 	private AnimatedSprite2D sprite2d;
+	public bool climbing = false;
 
 	public override void _Ready()
     {
@@ -27,11 +28,28 @@ public partial class main_character : CharacterBody2D
 
 
 		// Add the gravity.
-		if (!IsOnFloor()) {
-            velocity.Y += gravity * (float)delta;
-            sprite2d.Animation = "jumping";
-        }
-
+		if (climbing == false)
+		{
+			if (!IsOnFloor()) {
+				velocity.Y += gravity * (float)delta;
+				sprite2d.Animation = "jumping";
+			}
+		}
+		else if (climbing == true)
+		{
+			velocity.Y = 0;
+			if (Input.IsActionPressed("jump"))
+			{
+				velocity.Y = -600 * (float)delta * 10;
+				sprite2d.Animation = "jumping";
+			}
+			else if (Input.IsActionPressed("down"))
+			{
+				velocity.Y = 600 * (float)delta * 10;
+				sprite2d.Animation = "jumping";
+			}
+		}
+		
 		// Handle Jump.
 		if (Input.IsActionJustPressed("jump") && IsOnFloor())
 			velocity.Y = JumpVelocity;

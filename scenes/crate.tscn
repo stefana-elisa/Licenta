@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c3rkq6ut7cmvp" path="res://resources/level_2/tileset_city_free.png" id="2_u3kp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyywx"]
-size = Vector2(136, 82)
+size = Vector2(136, 80)
 
 [node name="Crate" type="RigidBody2D"]
 texture_filter = 1

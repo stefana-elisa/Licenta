@@ -116,7 +116,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_605k3"]
 size = Vector2(44, 62)
 
-[node name="MainCharacter" type="CharacterBody2D"]
+[node name="MainCharacter" type="CharacterBody2D" groups=["Climber"]]
 collision_mask = 180
 script = ExtResource("1_7jfgm")
 

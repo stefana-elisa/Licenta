@@ -109,16 +109,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_da4sw"]
-size = Vector2(21, 19)
+size = Vector2(20.6077, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4f2r"]
-size = Vector2(19, 16)
+size = Vector2(19, 23)
 
-[node name="ShadowCharacter" type="CharacterBody2D"]
+[node name="ShadowCharacter" type="CharacterBody2D" groups=["Climber"]]
 collision_layer = 2
 collision_mask = 172
 script = ExtResource("1_fkr4g")
@@ -135,9 +135,10 @@ autoplay = "default"
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
-position = Vector2(0.5, 10.5)
+position = Vector2(0.303848, 7.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_da4sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 11)
+position = Vector2(0.5, 7.5)
 shape = SubResource("RectangleShape2D_i4f2r")

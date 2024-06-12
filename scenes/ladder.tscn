@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b34fjp3pfiabj"]
+
+[ext_resource type="Texture2D" uid="uid://dqs8m8owbuwxd" path="res://resources/ladder.png" id="1_g52v7"]
+[ext_resource type="Script" path="res://scenes/ladder.cs" id="1_j2fc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nclu1"]
+size = Vector2(16, 128)
+
+[node name="Ladder" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_j2fc4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_g52v7")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 24)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nclu1")
+
+[connection signal="body_entered" from="." to="." method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_ladder_body_exited"]
