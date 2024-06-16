@@ -67,7 +67,6 @@ public partial class dog : CharacterBody2D
 
 	private void OnBodyEntered(Node body)
     {
-		//GD.Print("Ajuns in fct on body entered");
         if (body.Name == "MainCharacter")
         {
 			CallDeferred(nameof(ChangeScene), "res://scenes/death_screen.tscn");

@@ -13,7 +13,6 @@ public partial class shadow_character : CharacterBody2D
 	public override void _Ready()
     {
         sprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        //GD.Print(sprite2d);
 
 		mainCharacter = GetNode<CharacterBody2D>("%MainCharacter"); 	
 		if (mainCharacter == null)
@@ -77,7 +76,7 @@ public partial class shadow_character : CharacterBody2D
 				velocity.Y = JumpVelocity;
 			}
 
-			if (distance > 40) //GlobalPosition.X + 37 < mainCharacter.GlobalPosition.X)
+			if (distance > 40)
 			{
 				Vector2 _target = new((float)targetPosition, mainCharacter.GlobalPosition.Y);
 				Velocity = GlobalPosition.DirectionTo(_target) * 600.0f;
@@ -119,16 +118,12 @@ public partial class shadow_character : CharacterBody2D
 
 	private void OnBodyEntered(Node body)
     {
-		//GD.Print("Ajuns in fct on body entered");
         if (body is RigidBody2D)
         {
 			float direction = Input.GetAxis("left", "right");
 			if (Position.Y + 20 < mainCharacter.Position.Y) 
 			{
-				//GD.Print(Position);
 				Position = new Vector2(Position.X, Position.Y + 3);
-				//GD.Print("function 1");
-				//GD.Print(Position);
 			}
 			else
 			{
@@ -142,7 +137,6 @@ public partial class shadow_character : CharacterBody2D
         if ((@event is InputEventKey keyEvent) && Input.IsActionJustPressed("down") && IsOnFloor() && Position.Y + 20 >= mainCharacter.Position.Y)
         {
             Position = new Vector2(Position.X, Position.Y + 1);
-			
         }
     }
 }
