@@ -142,7 +142,7 @@ public partial class shadow_character : CharacterBody2D
         if ((@event is InputEventKey keyEvent) && Input.IsActionJustPressed("down") && IsOnFloor() && Position.Y + 20 >= mainCharacter.Position.Y)
         {
             Position = new Vector2(Position.X, Position.Y + 1);
-				//GD.Print("function 2");
+			
         }
     }
 }

@@ -25,8 +25,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -365.0
-offset_top = -162.0
+offset_top = -258.0
 offset_right = 365.0
+offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -40,13 +41,47 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -126.0
-offset_top = 60.0
+offset_top = -36.0
 offset_right = 127.0
-offset_bottom = 136.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.72549, 0.435294, 0.901961, 1)
 theme_override_font_sizes/font_size = 40
 text = "Play"
 
+[node name="OptionsBTN" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 68.0
+offset_right = 127.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="QuitBTN" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 172.0
+offset_right = 127.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
 [connection signal="pressed" from="PlayBTN" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="OptionsBTN" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="QuitBTN" to="." method="_on_quit_btn_pressed"]

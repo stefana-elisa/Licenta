@@ -30,6 +30,9 @@ public partial class collectable : Area2D
 		} else if (sceneName == "level2")
 		{
 			sprite2d.Animation = "feather";
+		} else if (sceneName == "level3")
+		{
+			sprite2d.Animation = "feather";
 		}
     }
 
@@ -51,6 +54,11 @@ public partial class collectable : Area2D
 			gameManager.AddPoints();
 		}
 		else if (sceneName == "level2" && body.Name == "ShadowCharacter")
+		{
+			QueueFree();
+			gameManager.AddPoints();
+		}
+		else if (sceneName == "level3" && body.Name == "ShadowCharacter")
 		{
 			QueueFree();
 			gameManager.AddPoints();

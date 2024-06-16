@@ -53,6 +53,11 @@ public partial class character_select : Node
 
 	public void _on_select_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/level1.tscn");
+		//GetTree().ChangeSceneToFile("res://scenes/levels_menu.tscn");
+	}
+
+	public void _on_back_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
 	}
 }

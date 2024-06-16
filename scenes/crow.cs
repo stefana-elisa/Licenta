@@ -8,6 +8,7 @@ public partial class crow : CharacterBody2D
 	public Vector2 original_position;
 	public Vector2 target_position;
 	private AnimatedSprite2D sprite2d;
+	private game game;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -17,6 +18,7 @@ public partial class crow : CharacterBody2D
 		original_position = new Vector2(Position.X, Position.Y);
         target_position = new Vector2(Position.X - 200, Position.Y);
 		sprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		game = GetNode<game>("/root/Game");
     }
 
     public override void _PhysicsProcess(double delta)
@@ -54,6 +56,7 @@ public partial class crow : CharacterBody2D
 
         if (sceneName == "level1" && body.Name == "MainCharacter")
         {
+			game.Level1Finished = true;
             CallDeferred(nameof(ChangeScene), "res://scenes/level2.tscn");
         }
         else if (sceneName == "level2" && body.Name == "ShadowCharacter")

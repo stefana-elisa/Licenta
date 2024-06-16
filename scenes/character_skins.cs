@@ -14,14 +14,6 @@ public partial class character_skins : AnimatedSprite2D
 
 	public override void _Ready()
     {
-		// game = GetNode<game>("global/game.cs");
-
-		// if (game == null)
-        // {
-        //     GD.PrintErr("Game object is not initialized");
-        //     return;
-        // }
-
 		game = GetNode<game>("/root/Game");
 
         if (players.TryGetValue(game.PlayerSelect, out var loadResource))

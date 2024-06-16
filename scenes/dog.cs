@@ -70,7 +70,7 @@ public partial class dog : CharacterBody2D
 		//GD.Print("Ajuns in fct on body entered");
         if (body.Name == "MainCharacter")
         {
-			CallDeferred(nameof(ChangeScene), "res://scenes/end_screen.tscn");
+			CallDeferred(nameof(ChangeScene), "res://scenes/death_screen.tscn");
 		}
 	}
 

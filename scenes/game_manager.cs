@@ -35,6 +35,10 @@ public partial class game_manager : Node
 		{
 			pointsLabel.Text = "Points: " + points + " / 5";
 			game.Level2Points +=1;
+		} else if (sceneName == "level3")
+		{
+			pointsLabel.Text = "Points: " + points + " / 5";
+			game.Level3Points +=1;
 		}
 
     }

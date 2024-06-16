@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://nnpma0tfrblh"]
 
-[ext_resource type="Texture2D" uid="uid://cwm34f2bdni4o" path="res://resources/level2/Background.png" id="1_he2s1"]
+[ext_resource type="Texture2D" uid="uid://cxlc875knbxlr" path="res://resources/Background.png" id="1_db7mb"]
 [ext_resource type="PackedScene" uid="uid://nnn78mxkadtm" path="res://scenes/main_character.tscn" id="7_lqqxi"]
 [ext_resource type="PackedScene" uid="uid://b2pbjwpf44wpv" path="res://scenes/collectable.tscn" id="9_bnf2r"]
 [ext_resource type="Texture2D" uid="uid://d3x7mrcjii8c" path="res://resources/level_1/Tileset_Fruit_Tree_16x16 new.png" id="10_62gta"]
@@ -1070,7 +1070,7 @@ texture_filter = 1
 offset_right = 2892.0
 offset_bottom = 324.0
 scale = Vector2(1.97641, 1.97641)
-texture = ExtResource("1_he2s1")
+texture = ExtResource("1_db7mb")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="SceneObjects"]
@@ -1091,7 +1091,7 @@ layer_0/tile_data = PackedInt32Array(655360, 589826, 2, 655361, 589826, 2, 65536
 position = Vector2(217, 605)
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/MainCharacter"]
-position = Vector2(292, -117)
+position = Vector2(260, -85)
 scale = Vector2(3.8, 3.8)
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
