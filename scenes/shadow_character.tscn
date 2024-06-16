@@ -136,7 +136,6 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
 position = Vector2(0.303848, 7.5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_da4sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -117,7 +117,7 @@ animations = [{
 size = Vector2(44, 62)
 
 [node name="MainCharacter" type="CharacterBody2D" groups=["Climber"]]
-collision_mask = 180
+collision_mask = 948
 script = ExtResource("1_7jfgm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

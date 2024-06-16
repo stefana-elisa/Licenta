@@ -1479,6 +1479,7 @@ rotation = 1.57079
 scale = Vector2(2.98366, 0.512624)
 
 [node name="StaticBody2D10" parent="SceneObjects/Barrier" instance=ExtResource("12_kx8b4")]
+visible = false
 position = Vector2(6340, 252)
 scale = Vector2(3.94366, 0.512624)
 
