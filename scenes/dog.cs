@@ -7,6 +7,7 @@ public partial class dog : CharacterBody2D
 	bool facing_right = true;
 	private AnimatedSprite2D sprite2d;
 	private RayCast2D raycast2d;
+	private Area2D collisionDetector;
 
     public override void _Ready()
     {
@@ -20,6 +21,9 @@ public partial class dog : CharacterBody2D
 		{
 			GD.PrintErr("Could not find raycast");
 		}
+
+		collisionDetector = GetNode<Area2D>("CollisionDetector");
+        collisionDetector.BodyEntered += OnBodyEntered;
 	}
 
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -60,4 +64,18 @@ public partial class dog : CharacterBody2D
 			Speed = Mathf.Abs(Speed) * -1;
 		}
 	}
+
+	private void OnBodyEntered(Node body)
+    {
+		//GD.Print("Ajuns in fct on body entered");
+        if (body.Name == "MainCharacter")
+        {
+			CallDeferred(nameof(ChangeScene), "res://scenes/end_screen.tscn");
+		}
+	}
+
+	private void ChangeScene(string scenePath)
+    {
+        GetTree().ChangeSceneToFile(scenePath);
+    }
 }
